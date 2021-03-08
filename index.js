@@ -12,6 +12,10 @@ router.get("/projects", (req, res) => {
   res.sendFile(path.join(__dirname + "/projects.html"));
 });
 
+router.get("/contact", (req, res) => {
+  res.sendFile(path.join(__dirname + "/contact.html"));
+});
+
 app.use("/", router);
 app.use(express.static("public"));
 app.listen(port, () => {
