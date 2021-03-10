@@ -1,11 +1,12 @@
 
       <main class="px-3">
-        <h1>Projects</h1>
+        <h1>{{title}}</h1>
         <p class="lead">List of project in githb
           <ul>
-            <li>Porfolio</li>
-            <li>Roborally</li>
+            {{#projects}}
+            <li><a href={{html_url}}>{{name}}</a></li>
+            {{/projects}}
+            
           </ul>
         </p>
       </main>
-      
