@@ -5,6 +5,8 @@ const router = express.Router();
 const mustacheExpress = require("mustache-express");
 const https = require("https");
 const { title } = require("process");
+const fetch = require("node-fetch");
+const { json } = require("express");
 
 app.engine("html", mustacheExpress());
 app.set("view engine", "html");
@@ -24,33 +26,25 @@ router.get("/projects", (req, res) => {
       "user-agent": "node.js",
     },
   };
-  https.get(
+
+  const responsePromise = fetch(
     "https://api.github.com/users/maidersonn/repos",
-    options,
-    (jsonres) => {
-      let data = "";
+    options
+  )
+    .then((response) => response.json())
+    .then((repositories) => {
+      const repositoriesToLayout = repositories.filter(
+        (repository) =>
+          repository.name !== "bikoteak" &&
+          repository.name !== "Curso-de-JavaScript_ed15"
+      );
 
-      jsonres.on("data", (chunk) => {
-        data += chunk;
+      res.render("layout", {
+        title: "Projects",
+        projects: repositoriesToLayout,
+        projectPartial: true,
       });
-
-      jsonres.on("close", () => {
-        const repositories = JSON.parse(data);
-
-        const repositoriesToLayout = repositories.filter(
-          (repository) =>
-            repository.name !== "bikoteak" &&
-            repository.name !== "Curso-de-JavaScript_ed15"
-        );
-
-        res.render("layout", {
-          title: "Projects",
-          projects: repositoriesToLayout,
-          projectPartial: true,
-        });
-      });
-    }
-  );
+    });
 });
 
 router.get("/contact", (req, res) => {
