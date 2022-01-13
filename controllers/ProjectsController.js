@@ -1,7 +1,7 @@
-const getRepositories = require("../domain/ProjectsService");
+const fetchGithubRepositories = require("../data/GithubClient");
 
 const projectsController = (req, res) => {
-  getRepositories().then((repos) => {
+  fetchGithubRepositories().then((repos) => {
     res.render("layout", {
       title: "Projects",
       projects: repos,
