@@ -1,0 +1,35 @@
+.lead {
+  width: 63rem;
+}
+
+.px-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.leadParagraph {
+  margin-top: 0.7rem;
+}
+
+.leadLastParagraph {
+  margin-top: 2rem;
+}
+
+.multicolorText {
+  background-image: linear-gradient(
+    to left,
+    #818383,
+    #979899,
+    #abacad,
+    #c3c3c4,
+    #d3d4d4,
+    #e9ebec,
+    #f8fafcf8
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
