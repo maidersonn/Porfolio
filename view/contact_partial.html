@@ -1,35 +1,44 @@
 <main class="px-3">
+  <p class="lead">You can contact me below.</p>
   <form action="/contact" id="contact-form" method="post" role="form">
-    <fieldset>
-      <label for="name">Name</label>
-      <input
-        id="name"
-        name="name"
-        type="text"
-        placeholder="Your name"
-        required
-      />
-      <br />
-      <label for="email">Email</label>
-      <input
-        id="email"
-        name="email"
-        type="text"
-        placeholder="Your email"
-        required
-      />
-      <br />
-      <label for="message">Message</label>
-      <textarea
-        id="message"
-        name="message"
-        placeholder="Enter your message here"
-        rows="3"
-        required
-      >
-      </textarea>
+    <fieldset class="formFlex">
+      <div class="inputContainer">
+        <label class="formName" for="name">Name</label>
+        <input
+          class="inputName"
+          id="name"
+          name="name"
+          type="text"
+          placeholder="Your name"
+          required
+        />
+      </div>
 
-      <button type="submit">Submit</button>
+      <div class="inputContainer">
+        <label for="email">Email</label>
+        <input
+          class="inputEmail"
+          id="email"
+          name="email"
+          type="text"
+          placeholder="Your email"
+          required
+        />
+      </div>
+
+      <div class="inputContainer">
+        <label for="message">Message</label>
+        <textarea
+          class="inputMessage"
+          id="message"
+          name="message"
+          placeholder="Enter your message here"
+          rows="3"
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit" class="sendButton">Send</button>
     </fieldset>
   </form>
 </main>

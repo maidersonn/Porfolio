@@ -1,0 +1,25 @@
+.inputName,
+.inputEmail,
+.inputMessage {
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+  width: 15rem;
+  border-radius: 0.3rem;
+  background-color: #e9ebec;
+}
+
+.sendButton {
+  border-radius: 0.3rem;
+  background-color: #e9ebec;
+}
+
+.formFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 2rem;
+}
+
+.inputContainer {
+  display: flex;
+}
