@@ -48,3 +48,20 @@ body {
 .mb-auto {
   margin-bottom: 12rem;
 }
+
+.multicolorText {
+  background-image: linear-gradient(
+    to left,
+    #818383,
+    #979899,
+    #abacad,
+    #c3c3c4,
+    #d3d4d4,
+    #e9ebec,
+    #f8fafcf8
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

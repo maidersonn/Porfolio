@@ -17,16 +17,14 @@
   margin-top: 2rem;
 }
 
-.multicolorText {
+.homeTitle {
   background-image: linear-gradient(
     to left,
-    #818383,
-    #979899,
     #abacad,
     #c3c3c4,
     #d3d4d4,
     #e9ebec,
-    #f8fafcf8
+    #fffffff8
   );
   -webkit-background-clip: text;
   -moz-background-clip: text;
