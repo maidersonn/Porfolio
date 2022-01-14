@@ -1,3 +1,18 @@
+.projectsTitle {
+  background-image: linear-gradient(
+    to left,
+    #abacad,
+    #c3c3c4,
+    #d3d4d4,
+    #e9ebec,
+    #fffffff8
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .projects {
   width: 50rem;
   height: 15rem;
@@ -28,6 +43,7 @@
 }
 
 .projectLink:visited {
+  color: tomato;
 }
 .projectLink:hover {
   color: white;
