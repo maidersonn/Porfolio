@@ -28,6 +28,6 @@ app.post("/contact", postController);
 
 app.use("/", router);
 app.use(express.static("public"));
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`server started on port ${port}`);
 });
