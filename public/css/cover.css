@@ -47,6 +47,8 @@ body {
 
 .mb-auto {
   margin-bottom: 12rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
 .multicolorText {
