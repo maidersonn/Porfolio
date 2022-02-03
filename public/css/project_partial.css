@@ -14,22 +14,24 @@
 }
 
 .projects {
-  width: 50rem;
-  height: 15rem;
+  width: 100rem;
+  height: 20rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   margin: auto;
 }
 
 .project {
-  width: 15rem;
-  height: 3rem;
+  width: 20rem;
+  height: 5rem;
+  margin-right: 2rem;
   background-color: #373e44;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   border-radius: 0.5rem;
 }
 
@@ -37,14 +39,30 @@
   border: 1px solid white;
 }
 
-.projectLink {
+.projectLink,
+.projectWeb {
   text-decoration: none;
   color: white;
 }
 
-.projectLink:visited {
+.projectLink:visited,
+.projectWeb:visited {
   color: tomato;
 }
-.projectLink:hover {
+.projectLink:hover,
+.projectWeb:hover {
+  color: tomato;
+}
+
+.projectWeb {
+  font-size: 16px;
+}
+
+.projectLink {
+  font-size: 20px;
+}
+
+.projectLink:visited:hover,
+.projectWeb:visited:hover {
   color: white;
 }
