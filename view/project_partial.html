@@ -4,7 +4,13 @@
         <p class="lead">
           <div class="projects">
             {{#projects}}
-            <span class="project"><a class="projectLink" href={{html_url}}>{{name}}</a></span>
+            <span class="project">
+              <a class="projectLink" href={{html_url}}>{{name}}</a>
+             {{#web}}
+            <a class="projectWeb" href={{web}}>website</a>
+             {{/web}}
+            </span>
+           
             {{/projects}}
             
           </div >
