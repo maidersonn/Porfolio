@@ -1,7 +1,10 @@
 const fetchGithubRepositories = require("../data/GithubClient");
 
 const getRepositories = () =>
-  fetchGithubRepositories().then(addWebToRepos).then(addExtraProjects);
+  fetchGithubRepositories()
+    .then(filterRepos)
+    .then(addWebToRepos)
+    .then(addExtraProjects);
 
 const extraProjects = [
   {
@@ -33,5 +36,8 @@ const addWebToRepos = (repositories) =>
       web: repository.web,
     };
   });
+
+const filterRepos = (repositories) =>
+  repositories.filter((repository) => repository.name !== "Pokedex-Back");
 
 module.exports = getRepositories;
