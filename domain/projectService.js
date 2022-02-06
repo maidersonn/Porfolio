@@ -20,7 +20,7 @@ const projects = [
     web: "https://maipokedex.vercel.app/",
   },
   {
-    name: "proyectoCartas",
+    name: "Cards-Game",
     web: "https://cards-game-maider.vercel.app/",
   },
 ];
