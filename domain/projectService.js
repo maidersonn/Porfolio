@@ -23,6 +23,10 @@ const projects = [
     name: "Cards-Game",
     web: "https://cards-game-maider.vercel.app/",
   },
+  {
+    name: "Beer-project",
+    web: "https://beer-project-maider.vercel.app/",
+  },
 ];
 
 const addExtraProjects = (repositories) => repositories.concat(extraProjects);
