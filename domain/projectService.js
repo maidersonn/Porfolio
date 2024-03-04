@@ -1,24 +1,16 @@
 const fetchGithubRepositories = require("../data/GithubClient");
 
 const getRepositories = () =>
-  fetchGithubRepositories()
-    .then(filterRepos)
-    .then(addWebToRepos)
-    .then(addExtraProjects);
+  fetchGithubRepositories().then(addWebToRepos).then(addExtraProjects);
 
 const extraProjects = [
   {
     name: "WorkAbroad",
     html_url: "https://github.com/Nomadas-Digitales",
-    web: "https://workabroad.vercel.app/home",
   },
 ];
 
 const projects = [
-  {
-    name: "Pokedex",
-    web: "https://maipokedex.vercel.app/",
-  },
   {
     name: "Cards-Game",
     web: "https://cards-game-maider.vercel.app/",
@@ -44,8 +36,5 @@ const addWebToRepos = (repositories) =>
       web: repository.web,
     };
   });
-
-const filterRepos = (repositories) =>
-  repositories.filter((repository) => repository.name !== "Pokedex-Back");
 
 module.exports = getRepositories;

@@ -9,7 +9,7 @@ The HTTP client is node-fetch.
 
 ## Setup
 
-This web needs MAIL_USER and MAIL_PASSWORD environment variables to work correctly.
+This web needs MAIL_USER and MAIL_PASSWORD environment variables to work correctly in .env file.
 Once they are added, just execute
 
 `npm run start`
